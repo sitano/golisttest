@@ -24,4 +24,7 @@ docker run --rm -ti --name golisttest golisttest
 
 ```
 vagrant up
+vagrant ssh
+go get github.com/sitano/golisttest
+go test -v github.com/sitano/golisttest/... 
 ```
