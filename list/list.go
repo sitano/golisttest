@@ -42,10 +42,9 @@ func (l *List) Insert(v Key) {
 }
 
 // Lookup for first occurrence of Key v
-func (l *List) Find(v Key) *Node {
-	n := l.head
-	for ; n != nil && n.Value != v; n = n.next {}
-	return n
+func (l *List) Find(v Key) (n *Node) {
+	for n = l.head; n != nil && n.Value != v; n = n.next {}
+	return
 }
 
 func (n *Node) String() string {
