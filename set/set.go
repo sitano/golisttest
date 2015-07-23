@@ -18,7 +18,7 @@ func NewSet() *Set {
 	}
 }
 
-// Add an element into the Set O(1)
+// Add an element into the Set O(n) - contains is the longest call
 func (s *Set) Add(v list.Key) bool {
 	if !s.Contains(v) {
 		s.storage.Insert(v)
